@@ -19,14 +19,14 @@ function App() {
   const [statis,setStat] = useState([]);
  
 const getData = async(page,search)=>{
-  let response = await axios.get(`http://localhost:8040/initial/product?page=${page}&search=${search}`);
+  let response = await axios.get(`https://vast-cyan-bandicoot-toga.cyclic.app/initial/product?page=${page}&search=${search}`);
     let resp = response.data;
     setData(resp.initialData);
     setTotalPages(resp.totallength);
 }
 
 const getStat = async(months)=>{
-  let response = await axios.get(`http://localhost:8040/initial/statistics?months=${months}`);
+  let response = await axios.get(`https://vast-cyan-bandicoot-toga.cyclic.app/initial/statistics?months=${months}`);
   let reps = response.data;
   setStat(reps);
 }
